@@ -2,7 +2,7 @@
   <div>
     <Navbar/>
     <div class="jumbotron text-center">
-      <h1>Saying it with a card</h1>
+      <h1>{{title}}</h1>
       <p>Specialty hand-drawn cards and digital printed cards.</p>
     </div>
     <!-- using the v-for to fill the content in the accordian -->
@@ -38,6 +38,7 @@ export default {
   name: "Pricing",
   data() {
     return {
+      title: "Saying it with a card",
       data: [
         {
           title: "Group 1: Specialty Hand-made greeting card",
@@ -56,7 +57,21 @@ export default {
         },
       ],
     };
-  },
+  }, 
+   head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. 
+          {
+            hid: 'Description',
+            name: 'Description',
+            content: 'Pricing'
+          }
+        ]
+      }
+    }  
+
 };
 </script>
 <style scoped>

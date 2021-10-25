@@ -2,7 +2,7 @@
   <div>
     <Navbar/>
     <div class="jumbotron text-center">
-      <h1>Saying it with a card</h1>
+      <h1>{{title}}</h1>
       <p>Specialty hand-drawn cards and digital printed cards.</p>
     </div>
     
@@ -38,6 +38,7 @@ export default {
   name: "CardGrid",
   data: () => {
     return {
+      title: 'Saying it with a card',
       images: [
         { src: image_1, id: 1 },
         { src: image_2, id: 2 },
@@ -48,6 +49,19 @@ export default {
       ],
     };
   },
+   head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. 
+          {
+            hid: 'Description',
+            name: 'Description',
+            content: 'Prints'
+          }
+        ]
+      }
+    }
 };
 </script>
 <style scoped>

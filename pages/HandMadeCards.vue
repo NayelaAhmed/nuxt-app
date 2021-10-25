@@ -124,6 +124,19 @@ export default {
                 },
             ]
         }
+    },
+      head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. 
+          {
+            hid: 'Description',
+            name: 'Description',
+            content: 'Handmade greeting cards are one of our culture’s foremost tools of communications as we evolve more and more into the digital world this lost art has become a joy of gift'
+          }
+        ]
+      }
     }
 }
 </script>

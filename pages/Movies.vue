@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       movieData: [],
+      title: ""
     };
   },
   //Making an Api call
@@ -24,5 +25,18 @@ export default {
       "http://www.omdbapi.com/?i=tt3896198&apikey=50cccd0b"
     ).then((res) => res.json());
   },
+   head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid is used as unique identifier. 
+          {
+            hid: 'Description',
+            name: 'Description',
+            content: 'Movies'
+          }
+        ]
+      }
+    }
 };
 </script>
