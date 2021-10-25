@@ -44,7 +44,7 @@
       <div class="container">
         <img
           v-if="show"
-          src="..\Images\no-button-greeting-cardLanding-pg.png"
+          src="../Images/no-button-greeting-cardLanding-pg.png"
           class="img-fluid"
           alt="Responsive image"
         />
